@@ -28,7 +28,7 @@ public class Test {
     public void insertSortTest(){
         Integer[] datas = {5,2,1,6};
 
-        InsertSort.sort(datas, new NumberComparator(true));
+//        InsertSort.sort(datas, new NumberComparator(true));
         Dumper.dumpArray(datas);
 
     }
@@ -37,7 +37,7 @@ public class Test {
     public void mergeSortTest(){
         Integer[] datas = {5,2,1,6,3};
 
-        MergeSort.sort(datas,0,datas.length-1,new NumberComparator(false));
+//        MergeSort.sort(datas,0,datas.length-1,new NumberComparator(false));
 
         Dumper.dumpArray(datas);
     }

@@ -1,6 +1,7 @@
 package IntroAlgo.Sort;
 
 import IntroAlgo.Sort.Exception.TypeNotFoundException;
+import IntroAlgo.Sort.SortImple.HeapSorter;
 import IntroAlgo.Sort.SortImple.InsertSorter;
 import IntroAlgo.Sort.SortImple.MergeSorter;
 import IntroAlgo.Sort.SortImple.RandInPlace;
@@ -23,6 +24,9 @@ public class SortManager {
 
             case RandomInPlace:
                 sorter = new RandInPlace(); break;
+
+            case HeapSort:
+                sorter = new HeapSorter(); break;
 
             default:{
                 throw new TypeNotFoundException("没有这个排序类型，请检查是否输入正确，或者使用checkType()查看可用类型");

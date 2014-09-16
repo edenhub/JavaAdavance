@@ -43,6 +43,12 @@ public class ComparatorSortTest {
         setDefaultComparator();
     }
 
+    @Test
+    public void HeapSortTest() throws TypeNotFoundException {
+        sorter = (ComparableSorter) SortManager.createSorter(SortType.HeapSort);
+        setDefaultComparator();
+    }
+
 
 
 
