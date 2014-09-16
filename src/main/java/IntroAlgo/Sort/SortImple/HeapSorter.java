@@ -39,7 +39,7 @@ public class HeapSorter extends ComparableSorter {
         buildHeap(datas,comparator);
         for (int i=datas.length-1; i>=1;i--){
             exchangeObject(datas,0,i);
-            heapify(datas,0,i,comparator);
+            heapify(datas,0,i-1,comparator);
         }
     }
 
