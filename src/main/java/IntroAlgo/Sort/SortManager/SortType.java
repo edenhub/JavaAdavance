@@ -1,4 +1,4 @@
-package IntroAlgo.Sort;
+package IntroAlgo.Sort.SortManager;
 
 /**
  * Created by lab on 14-8-10.

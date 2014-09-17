@@ -2,7 +2,9 @@ package IntroAlgo.Sort;
 
 import IntroAlgo.ComparatorImple.NumberComparator;
 import IntroAlgo.Sort.AbsSorter.ComparableSorter;
-import IntroAlgo.Sort.Exception.TypeNotFoundException;
+import IntroAlgo.Sort.SortManager.PropertiesSortManager;
+import IntroAlgo.Sort.SortManager.SortType;
+import IntroAlgo.Sort.SortManager.TypeSortManager;
 import IntroAlgo.Util.Dumper;
 import org.junit.After;
 import org.junit.Test;

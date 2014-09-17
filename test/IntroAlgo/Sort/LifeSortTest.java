@@ -1,7 +1,8 @@
 package IntroAlgo.Sort;
 
 import IntroAlgo.Sort.AbsSorter.LifeSorter;
-import IntroAlgo.Sort.Exception.TypeNotFoundException;
+import IntroAlgo.Sort.SortManager.SortType;
+import IntroAlgo.Sort.SortManager.TypeSortManager;
 import IntroAlgo.Util.Dumper;
 import org.junit.Test;
 

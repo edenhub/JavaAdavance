@@ -1,7 +1,8 @@
-package IntroAlgo.Sort;
+package IntroAlgo.Sort.SortManager;
 
 import IntroAlgo.Sort.Exception.MethodNotUseException;
 import IntroAlgo.Sort.Exception.TypeNotFoundException;
+import IntroAlgo.Sort.Sorter;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -16,7 +17,7 @@ public class PropertiesSortManager implements ISortManager{
     private PropertiesSortManager(){
         properties = new Properties();
         try {
-            properties.load(this.getClass().getResourceAsStream("../../Sorter.properties"));
+            properties.load(this.getClass().getResourceAsStream("../../../Sorter.properties"));
 //            properties.load(new FileInputStream("Sorter.properties"));
         } catch (IOException e) {
             e.printStackTrace();
