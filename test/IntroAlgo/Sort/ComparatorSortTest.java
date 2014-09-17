@@ -4,12 +4,8 @@ import IntroAlgo.ComparatorImple.NumberComparator;
 import IntroAlgo.Sort.AbsSorter.ComparableSorter;
 import IntroAlgo.Sort.Exception.TypeNotFoundException;
 import IntroAlgo.Util.Dumper;
-import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Test;
-
-import java.util.Comparator;
-import java.util.Random;
 
 /**
  * Created by lab on 14-8-10.
@@ -18,6 +14,8 @@ import java.util.Random;
 public class ComparatorSortTest {
     public static Integer[] datas = {3,33,11,4,5,99};
     public static ComparableSorter sorter;
+    public static TypeSortManager typeSortManager = new TypeSortManager();
+    public static PropertiesSortManager propertiesSortManager = PropertiesSortManager.getInstance();
 
     @After
     public void after(){
@@ -36,33 +34,52 @@ public class ComparatorSortTest {
 
 
     @Test
-    public void InsertSortTest() throws TypeNotFoundException {
-        sorter = (ComparableSorter) SortManager.createSorter(SortType.InsertSort);
+    public void InsertSortTest() throws Exception {
+        sorter = (ComparableSorter) typeSortManager.createSorter(SortType.InsertSort);
         setDefaultComparator();
     }
 
     @Test
-    public void MergeSortTest() throws TypeNotFoundException {
-        sorter = (ComparableSorter) SortManager.createSorter(SortType.MergeSort);
+    public void MergeSortTest() throws Exception {
+        sorter = (ComparableSorter) typeSortManager.createSorter(SortType.MergeSort);
         setDefaultComparator();
     }
 
     @Test
-    public void HeapSortTest() throws TypeNotFoundException {
-        sorter = (ComparableSorter) SortManager.createSorter(SortType.HeapSort);
+    public void HeapSortTest() throws Exception {
+        sorter = (ComparableSorter) typeSortManager.createSorter(SortType.HeapSort);
         setDefaultComparator();
     }
 
     @Test
-    public void MinHeapSortTest() throws TypeNotFoundException {
-        sorter = (ComparableSorter) SortManager.createSorter(SortType.HeapSort);
+    public void MinHeapSortTest() throws Exception {
+        sorter = (ComparableSorter) typeSortManager.createSorter(SortType.HeapSort);
         sorter.setComparator(new NumberComparator(true));
     }
 
     @Test
-    public void QuickSortTest() throws TypeNotFoundException {
-        sorter = (ComparableSorter) SortManager.createSorter(SortType.QuickSort);
+    public void QuickSortTest() throws Exception {
+        sorter = (ComparableSorter) typeSortManager.createSorter(SortType.QuickSort);
         setDefaultComparator();
     }
+
+    @Test
+    public void MinQuickSortTest() throws Exception {
+        sorter = (ComparableSorter) typeSortManager.createSorter(SortType.QuickSort);
+        sorter.setComparator(new NumberComparator(true));
+    }
+
+    @Test
+    public void PropertiesSortTest() throws Exception {
+        PropertiesSortManager manager = PropertiesSortManager.getInstance();
+        sorter = (ComparableSorter) manager.createSorter("sorter.insertSort");
+        setDefaultComparator();
+    }
+
+//    @Test
+//    public void testPropertiesType(){
+//       PropertiesSortManager manager = PropertiesSortManager.getInstance();
+//       manager.checkType();
+//    }
 
 }

@@ -1,5 +1,6 @@
 package IntroAlgo.Sort;
 
+import IntroAlgo.Sort.Exception.MethodNotUseException;
 import IntroAlgo.Sort.Exception.TypeNotFoundException;
 import IntroAlgo.Sort.SortImple.*;
 
@@ -8,9 +9,15 @@ import java.util.Objects;
 /**
  * Created by lab on 14-8-10.
  */
-public class SortManager {
+public class TypeSortManager implements ISortManager{
 
-    public static Sorter createSorter(SortType type) throws TypeNotFoundException {
+    @Override
+    public Sorter createSorter(String sorterName) throws Exception {
+        throw new MethodNotUseException("该方法不可用，请用createSorter(SortType type);");
+    }
+
+    @Override
+    public  Sorter createSorter(SortType type) throws Exception {
         Sorter sorter = null;
         switch (type){
             case InsertSort:
@@ -37,7 +44,8 @@ public class SortManager {
         return sorter;
     }
 
-    public static void checkType(){
+    @Override
+    public void checkType(){
         System.out.print("[ ");
         for(SortType st : SortType.values())
             System.out.print(st + " ");
