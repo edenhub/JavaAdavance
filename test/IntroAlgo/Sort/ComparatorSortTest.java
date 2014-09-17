@@ -14,8 +14,8 @@ import java.util.Random;
 /**
  * Created by lab on 14-8-10.
  */
-public class ComparatorSortTest {
 
+public class ComparatorSortTest {
     public static Integer[] datas = {3,33,11,4,5,99};
     public static ComparableSorter sorter;
 
@@ -57,6 +57,12 @@ public class ComparatorSortTest {
     public void MinHeapSortTest() throws TypeNotFoundException {
         sorter = (ComparableSorter) SortManager.createSorter(SortType.HeapSort);
         sorter.setComparator(new NumberComparator(true));
+    }
+
+    @Test
+    public void QuickSortTest() throws TypeNotFoundException {
+        sorter = (ComparableSorter) SortManager.createSorter(SortType.QuickSort);
+        setDefaultComparator();
     }
 
 }
