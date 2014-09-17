@@ -31,6 +31,7 @@ public class PriorityQueueTest {
 
     public void defaultAfterMethod(){
         Dumper.dumpArray(datas);
+
     }
 
     @Test
