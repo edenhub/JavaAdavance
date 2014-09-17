@@ -8,6 +8,13 @@ import java.util.Comparator;
  * Created by adam on 14-9-16.
  */
 public class HeapSorter extends ComparableSorter {
+//    private IHeap heaper;
+
+//    public HeapSorter(){
+//        super();
+//
+//        heaper = new BaseHeap();
+//    }
 
     protected void heapify(Object[] datas,int iStart,int heapSize,Comparator comparator){
         int l = iStart*2+1, r = (iStart+1)*2;
@@ -41,6 +48,11 @@ public class HeapSorter extends ComparableSorter {
             exchangeObject(datas,0,i);
             heapify(datas,0,i-1,comparator);
         }
+//        heaper.buildHeap(datas,comparator);
+//        for (int i=datas.length-1;i>=1;i--){
+//            heaper.exchangeObject(datas,0,i);
+//            heaper.heapify(datas,0,i-1,comparator);
+//        }
     }
 
     private void exchangeObject(Object[] datas,int first,int second){

@@ -8,6 +8,7 @@ import java.util.Comparator;
 public class NumberComparator implements Comparator{
     public boolean negative;
 
+
     public NumberComparator(boolean negative){
         this.negative = negative;
     }
@@ -21,5 +22,9 @@ public class NumberComparator implements Comparator{
             return c1.compareTo(o2);
         else
             return -(c1.compareTo(o2));
+    }
+
+    public void setNegative(boolean negative){
+        this.negative = negative;
     }
 }

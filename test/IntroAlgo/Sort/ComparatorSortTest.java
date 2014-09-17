@@ -4,9 +4,11 @@ import IntroAlgo.ComparatorImple.NumberComparator;
 import IntroAlgo.Sort.AbsSorter.ComparableSorter;
 import IntroAlgo.Sort.Exception.TypeNotFoundException;
 import IntroAlgo.Util.Dumper;
+import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Test;
 
+import java.util.Comparator;
 import java.util.Random;
 
 /**
@@ -28,8 +30,10 @@ public class ComparatorSortTest {
     }
 
     public void setDefaultComparator(){
+
         sorter.setComparator(new NumberComparator(false));
     }
+
 
     @Test
     public void InsertSortTest() throws TypeNotFoundException {
@@ -55,14 +59,4 @@ public class ComparatorSortTest {
         sorter.setComparator(new NumberComparator(true));
     }
 
-
-
-
-
-
-
-//    @Test
-//    public void CheckTypeTest(){
-//        SortManager.checkType();
-//    }
 }
