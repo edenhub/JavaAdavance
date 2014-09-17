@@ -24,7 +24,7 @@ public class QuickSorter extends ComparableSorter{
         return i+1;
     }
 
-    private void exchange(Object[] datas,int first,int second){
+    protected void exchange(Object[] datas,int first,int second){
         Object temp = datas[first];
         datas[first] = datas[second];
         datas[second] = temp;

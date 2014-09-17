@@ -35,6 +35,9 @@ public class TypeSortManager implements ISortManager{
             case QuickSort:
                 sorter = new QuickSorter(); break;
 
+            case RandomQuickSort:
+                sorter = new RandomQuickSorter(); break;
+
             default:{
                 throw new TypeNotFoundException("没有这个排序类型，请检查是否输入正确，或者使用checkType()查看可用类型");
             }

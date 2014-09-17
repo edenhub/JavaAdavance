@@ -76,6 +76,11 @@ public class ComparatorSortTest {
         setDefaultComparator();
     }
 
+    @Test
+    public void TestRadomQuickSort() throws Exception {
+        sorter = (ComparableSorter) propertiesSortManager.createSorter("sorter.randomQuickSort");
+        setDefaultComparator();
+    }
 //    @Test
 //    public void testPropertiesType(){
 //       PropertiesSortManager manager = PropertiesSortManager.getInstance();
