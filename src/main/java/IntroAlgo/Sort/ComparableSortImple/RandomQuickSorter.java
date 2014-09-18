@@ -1,4 +1,4 @@
-package IntroAlgo.Sort.SortImple;
+package IntroAlgo.Sort.ComparableSortImple;
 
 import IntroAlgo.Util.RandomUtil;
 

@@ -1,4 +1,4 @@
-package IntroAlgo.Sort.SortImple;
+package IntroAlgo.Sort.LinerSortImple;
 
 import IntroAlgo.Sort.AbsSorter.LifeSorter;
 
