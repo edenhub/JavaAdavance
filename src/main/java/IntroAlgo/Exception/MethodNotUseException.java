@@ -1,4 +1,4 @@
-package IntroAlgo.Sort.Exception;
+package IntroAlgo.Exception;
 
 /**
  * Created by adam on 14-9-17.

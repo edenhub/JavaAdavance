@@ -9,7 +9,7 @@ import java.util.Comparator;
  */
 public class RandomQuickSorter extends QuickSorter{
 
-    protected int randomPartitoin(Object[] datas,int p,int r,Comparator comparator){
+    public int randomPartitoin(Object[] datas,int p,int r,Comparator comparator){
         int i = RandomUtil.randomInRange(p,r);
         exchange(datas,i,r);
 
@@ -19,7 +19,7 @@ public class RandomQuickSorter extends QuickSorter{
 
 
     @Override
-    protected void quickSort(Object[] datas, int p, int r, Comparator comparator) {
+    public void quickSort(Object[] datas, int p, int r, Comparator comparator) {
         if (p<r){
             int q = randomPartitoin(datas,p,r,comparator);
             quickSort(datas,p,q-1,comparator);

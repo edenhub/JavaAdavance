@@ -8,7 +8,7 @@ import java.util.Comparator;
  * Created by adam on 14-9-17.
  */
 public class QuickSorter extends ComparableSorter{
-    protected int partition(Object[] datas,int p,int r,Comparator comparator){
+    public int partition(Object[] datas,int p,int r,Comparator comparator){
         Object x = datas[r];
         int i = p-1;
 
@@ -24,13 +24,13 @@ public class QuickSorter extends ComparableSorter{
         return i+1;
     }
 
-    protected void exchange(Object[] datas,int first,int second){
+    public void exchange(Object[] datas,int first,int second){
         Object temp = datas[first];
         datas[first] = datas[second];
         datas[second] = temp;
     }
 
-    protected void quickSort(Object[] datas,int p,int r,Comparator comparator){
+    public void quickSort(Object[] datas,int p,int r,Comparator comparator){
         if (p<r){
             int q = partition(datas,p,r,comparator);
             quickSort(datas,p,q-1,comparator);
