@@ -8,6 +8,7 @@ import java.util.List;
 public class BSTBuilder implements IBSTBuilder {
     @Override
     public BSTree buildFromList(Node[] list, boolean isRecur) {
+        assert list.length != 0;
         BSTree bsTree;
         if (isRecur)
             bsTree = new BSTreeRecur();
@@ -22,6 +23,7 @@ public class BSTBuilder implements IBSTBuilder {
 
     @Override
     public BSTree buildFromList(List<Node> list, boolean isRecur) {
+        assert !list.isEmpty();
         BSTree bsTree;
         if (isRecur)
             bsTree = new BSTreeRecur();
