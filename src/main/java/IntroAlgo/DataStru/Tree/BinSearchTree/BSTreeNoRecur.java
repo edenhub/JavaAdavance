@@ -9,6 +9,30 @@ import java.util.Stack;
  */
 public class BSTreeNoRecur extends BSTree {
     @Override
+    protected void treeInsert(Node tree, Node newNode) {
+        Node y = null;
+        Node copy = tree;
+
+        while(copy != null){
+            y = copy;
+            if (comparator.compare(newNode.key(),copy.key())<0)
+                copy = copy.leftChild();
+            else
+                copy = copy.rightChild();
+        }
+
+        newNode.setParent(y);
+        if (y == null){
+            tree = newNode;
+        }else{
+            if (comparator.compare(newNode.key(),y.key())<0)
+                y.setLeftChild(newNode);
+            else
+                y.setRightChild(newNode);
+        }
+    }
+
+    @Override
     protected Node treeMinimum(Node node) {
         Node target = node;
 

@@ -19,14 +19,42 @@ public abstract class BSTree implements IBSTree {
     }
 
     @Override
-    public boolean addNode(Node node) {
-        return false;
+    public void addNode(Node node) {
+        treeInsert(root,node);
     }
 
     @Override
-    public boolean deleteNode(Node node) {
-        return false;
+    public Node deleteNode(Node node) {
+        Node x = null, y = null;
+        if (node.leftChild()==null || node.rightChild()==null)
+            y = node;
+        else
+            y = successor(node);
+
+        if (y.leftChild() != null)
+            x = y.leftChild();
+        else
+            x = y.rightChild();
+
+        if (x != null)
+            x.setParent(y.parent());
+
+        if (y.parent() == null){
+            root = x;
+        }else if (comparator.compare(y.key(),y.parent().leftChild().key())==0){
+            y.parent().setLeftChild(x);
+        }else{
+            y.parent().setRightChild(x);
+        }
+
+        if (comparator.compare(y.key(),node.key())!=0){
+            node.setKey(y.key());
+        }
+
+        return y;
     }
+
+    protected abstract void treeInsert(Node tree,Node newNode);
 
     @Override
     public Node predecessor(Node node) {

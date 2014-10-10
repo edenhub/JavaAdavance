@@ -1,11 +1,22 @@
 package IntroAlgo.DataStru.Tree.BinSearchTree;
 
 import IntroAlgo.DataStru.Tree.IDumper;
+import IntroAlgo.Exception.MethodNotUseException;
 
 /**
  * Created by adam on 14-10-10.
  */
 public class BSTreeRecur extends BSTree {
+
+    @Override
+    protected void treeInsert(Node tree, Node newNode) {
+        if (tree == null){
+            tree = newNode;
+        }else if (comparator.compare(newNode.key(),tree.key())<0)
+            treeInsert(tree.leftChild(),newNode);
+        else
+            treeInsert(tree.rightChild(),newNode);
+    }
 
     @Override
     protected Node treeMinimum(Node node) {
