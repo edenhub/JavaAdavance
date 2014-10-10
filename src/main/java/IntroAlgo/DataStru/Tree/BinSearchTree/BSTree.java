@@ -1,6 +1,6 @@
 package IntroAlgo.DataStru.Tree.BinSearchTree;
 
-import IntroAlgo.DataStru.Tree.IDumper;
+import IntroAlgo.DataStru.Tree.Dumper.IDumper;
 
 import java.util.Comparator;
 

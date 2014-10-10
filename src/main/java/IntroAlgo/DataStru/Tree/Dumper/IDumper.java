@@ -1,4 +1,4 @@
-package IntroAlgo.DataStru.Tree;
+package IntroAlgo.DataStru.Tree.Dumper;
 
 /**
  * Created by adam on 14-10-9.
