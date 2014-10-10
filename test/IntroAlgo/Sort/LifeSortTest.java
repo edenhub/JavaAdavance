@@ -3,7 +3,7 @@ package IntroAlgo.Sort;
 import IntroAlgo.Sort.AbsSorter.LifeSorter;
 import IntroAlgo.Sort.SortManager.SortType;
 import IntroAlgo.Sort.SortManager.TypeSortManager;
-import IntroAlgo.Util.Dumper;
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.Test;
 
 /**

@@ -5,7 +5,7 @@ import IntroAlgo.Sort.AbsSorter.ComparableSorter;
 import IntroAlgo.Sort.SortManager.PropertiesSortManager;
 import IntroAlgo.Sort.SortManager.SortType;
 import IntroAlgo.Sort.SortManager.TypeSortManager;
-import IntroAlgo.Util.Dumper;
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.After;
 import org.junit.Test;
 

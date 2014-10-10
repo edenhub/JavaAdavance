@@ -4,7 +4,7 @@ import IntroAlgo.ComparatorImple.NumberComparator;
 import IntroAlgo.DataStru.Heap.BaseHeap;
 import IntroAlgo.DataStru.Heap.BaseHeapSort;
 import IntroAlgo.DataStru.Heap.IHeap;
-import IntroAlgo.Util.Dumper;
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.After;
 import org.junit.Test;
 

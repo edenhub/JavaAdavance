@@ -1,6 +1,6 @@
 package IntroAlgo.Sort.ComparableSortImple;
 
-import IntroAlgo.Util.RandomUtil;
+import IntroAlgo.Sort.Util.RandomUtil;
 
 import java.util.Comparator;
 

@@ -1,4 +1,4 @@
-package IntroAlgo.Util;
+package IntroAlgo.Sort.Util;
 
 /**
  * Created by adam on 14-9-18.

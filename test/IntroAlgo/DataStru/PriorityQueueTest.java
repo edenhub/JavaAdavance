@@ -2,7 +2,7 @@ package IntroAlgo.DataStru;
 
 import IntroAlgo.ComparatorImple.NumberComparator;
 import IntroAlgo.DataStru.PriorityQueue.HeapPriorityQueue;
-import IntroAlgo.Util.Dumper;
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

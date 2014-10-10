@@ -1,7 +1,7 @@
 package IntroAlgo.ch02;
 
 import IntroAlgo.ComparatorImple.NumberComparator;
-import IntroAlgo.Util.Dumper;
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.Assert;
 
 /**

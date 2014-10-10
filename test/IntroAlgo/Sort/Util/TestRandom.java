@@ -1,4 +1,4 @@
-package IntroAlgo.Util;
+package IntroAlgo.Sort.Util;
 
 import org.junit.Test;
 

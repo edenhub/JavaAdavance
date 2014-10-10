@@ -1,9 +1,8 @@
 package IntroAlgo.Sort;
 
-import IntroAlgo.Util.Dumper;
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.Test;
 
-import java.util.Map;
 import java.util.Random;
 
 /**

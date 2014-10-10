@@ -1,7 +1,6 @@
-package IntroAlgo.Util;
+package IntroAlgo.Sort.Util;
 
 import java.io.PrintWriter;
-import java.io.StringWriter;
 
 /**
  * Created by lab on 14-8-10.

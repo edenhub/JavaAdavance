@@ -7,9 +7,10 @@ import java.util.Comparator;
 /**
  * Created by adam on 14-10-10.
  */
-public class BSTree implements IBSTree {
+public abstract class BSTree implements IBSTree {
     private Node root;
-    private Comparator comparator;
+
+    protected Comparator comparator;
 
     public BSTree(){}
 
@@ -28,6 +29,37 @@ public class BSTree implements IBSTree {
     }
 
     @Override
+    public Node predecessor(Node node) {
+        if (node.leftChild() != null)
+            return treeMaximum(node);
+
+        Node parent = node.parent();
+        Node copy = node;
+
+        while(parent!= null && copy == parent.leftChild()){
+            copy = parent;
+            parent = copy.parent();
+        }
+
+        return parent;
+    }
+
+    @Override
+    public Node successor(Node node) {
+        if (node.rightChild() != null)
+            return treeMinimum(node);
+        Node parent = node.parent();
+        Node copy = node;
+
+        while(parent!=null && copy == parent.rightChild()){
+            copy = parent;
+            parent = copy.parent();
+        }
+
+        return parent;
+    }
+
+    @Override
     public void sort(IDumper dumper) {
         inOrderTreeView(root,dumper);
     }
@@ -37,22 +69,23 @@ public class BSTree implements IBSTree {
         return treeSearch(root,k);
     }
 
-    protected void inOrderTreeView(Node node,IDumper dumper){
-        if (node != null){
-            inOrderTreeView(node.leftChild(),dumper);
-            dumper.dumperObject(node.key());
-            inOrderTreeView(node.rightChild(),dumper);
-        }
+    @Override
+    public Node minimum() {
+        return treeMinimum(root);
     }
 
-    protected Node treeSearch(Node node,Object k){
-        if (comparator.compare(node.key(),k) == 0)
-            return node;
-        else if (comparator.compare(node.key(),k) < 0)
-            return treeSearch(node.leftChild(),k);
-        else
-            return treeSearch(node.rightChild(),k);
+    @Override
+    public Node maximum() {
+        return treeMaximum(root);
     }
+
+    protected abstract Node treeMinimum(Node node);
+
+    protected abstract Node treeMaximum(Node node);
+
+    protected abstract void inOrderTreeView(Node node,IDumper dumper);
+
+    protected abstract Node treeSearch(Node node,Object k);
 
     public Node getRoot() {
         return root;
