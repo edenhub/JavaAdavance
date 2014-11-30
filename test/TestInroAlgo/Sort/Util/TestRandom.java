@@ -1,5 +1,6 @@
 package TestInroAlgo.Sort.Util;
 
+import IntroAlgo.Sort.Util.RandomUtil;
 import org.junit.Test;
 
 /**
@@ -12,7 +13,7 @@ public class TestRandom {
         int begin = 3,end = 9;
 
         for (int i=0;i<100;i++){
-            int random = RandomUtil.randomInRange(begin,end);
+            int random = RandomUtil.randomInRange(begin, end);
             assert random >= begin;
             assert random <= end;
         }

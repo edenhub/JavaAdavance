@@ -1,5 +1,7 @@
 package TestThinkingInJava.enums;
 
+import ThinkingInJava.enums.ClazzEnum;
+import ThinkingInJava.enums.SetEnums;
 import org.junit.Test;
 
 import java.util.EnumSet;

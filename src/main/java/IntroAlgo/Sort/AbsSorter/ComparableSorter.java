@@ -1,5 +1,7 @@
 package IntroAlgo.Sort.AbsSorter;
+
 import IntroAlgo.Sort.SortLife;
+
 import java.util.Comparator;
 
 /**

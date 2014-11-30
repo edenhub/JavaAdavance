@@ -1,5 +1,9 @@
 package TestInroAlgo.Sort;
 
+import IntroAlgo.Sort.AbsSorter.LifeSorter;
+import IntroAlgo.Sort.SortManager.SortType;
+import IntroAlgo.Sort.SortManager.TypeSortManager;
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.Test;
 
 /**

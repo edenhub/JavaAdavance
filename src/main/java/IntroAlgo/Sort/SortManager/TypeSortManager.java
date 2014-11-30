@@ -1,7 +1,10 @@
 package IntroAlgo.Sort.SortManager;
 
 import IntroAlgo.Exception.MethodNotUseException;
+import IntroAlgo.Sort.ComparableSortImple.*;
 import IntroAlgo.Sort.Exception.TypeNotFoundException;
+import IntroAlgo.Sort.LinerSortImple.RandInPlace;
+import IntroAlgo.Sort.Sorter;
 
 import java.util.Objects;
 

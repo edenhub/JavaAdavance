@@ -1,5 +1,8 @@
 package IntroAlgo.Select.TipSelectImple;
 
+import IntroAlgo.Select.AbsCmpTipSelecter;
+import IntroAlgo.Sort.ComparableSortImple.RandomQuickSorter;
+
 import java.util.Comparator;
 
 /**

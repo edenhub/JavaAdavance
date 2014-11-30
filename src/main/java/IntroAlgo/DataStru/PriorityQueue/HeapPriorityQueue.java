@@ -1,5 +1,8 @@
 package IntroAlgo.DataStru.PriorityQueue;
 
+import IntroAlgo.DataStru.Heap.BaseHeap;
+import IntroAlgo.DataStru.Heap.IHeap;
+
 import java.util.Comparator;
 
 /**

@@ -1,11 +1,13 @@
 package IntroAlgo.Sort.ComparableSortImple;
 
+import IntroAlgo.Sort.AbsSorter.ComparableSorter;
+
 import java.util.Comparator;
 
 /**
  * Created by adam on 14-9-17.
  */
-public class QuickSorter extends ComparableSorter{
+public class QuickSorter extends ComparableSorter {
     public int partition(Object[] datas,int p,int r,Comparator comparator){
         Object x = datas[r];
         int i = p-1;

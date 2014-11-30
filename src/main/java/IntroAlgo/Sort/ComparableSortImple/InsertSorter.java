@@ -1,5 +1,7 @@
 package IntroAlgo.Sort.ComparableSortImple;
 
+import IntroAlgo.Sort.AbsSorter.ComparableSorter;
+
 import java.util.Comparator;
 
 /**

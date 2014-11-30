@@ -1,5 +1,7 @@
 package IntroAlgo.DataStru.Tree.BinSearchTree;
 
+import IntroAlgo.DataStru.Tree.Dumper.IDumper;
+
 /**
  * Created by adam on 14-10-10.
  */

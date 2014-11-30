@@ -1,5 +1,8 @@
 package TestInroAlgo.Selector;
 
+import IntroAlgo.ComparatorImple.NumberComparator;
+import IntroAlgo.Select.AbsCmpTipSelecter;
+import IntroAlgo.Select.TipSelectImple.RandomTipSelecter;
 import org.junit.Test;
 
 import java.util.Comparator;

@@ -1,5 +1,7 @@
 package IntroAlgo.Sort.ComparableSortImple;
 
+import IntroAlgo.Sort.Util.RandomUtil;
+
 import java.util.Comparator;
 
 /**
@@ -8,7 +10,7 @@ import java.util.Comparator;
 public class RandomQuickSorter extends QuickSorter{
 
     public int randomPartitoin(Object[] datas,int p,int r,Comparator comparator){
-        int i = RandomUtil.randomInRange(p,r);
+        int i = RandomUtil.randomInRange(p, r);
         exchange(datas,i,r);
 
         return partition(datas,p,r,comparator);

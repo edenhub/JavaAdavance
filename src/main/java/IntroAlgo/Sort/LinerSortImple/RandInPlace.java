@@ -1,5 +1,7 @@
 package IntroAlgo.Sort.LinerSortImple;
 
+import IntroAlgo.Sort.AbsSorter.LifeSorter;
+
 import java.util.Comparator;
 import java.util.Random;
 

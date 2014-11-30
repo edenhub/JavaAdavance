@@ -1,5 +1,6 @@
 package TestInroAlgo.Sort;
 
+import IntroAlgo.Sort.Util.Dumper;
 import org.junit.Test;
 
 import java.util.Random;
