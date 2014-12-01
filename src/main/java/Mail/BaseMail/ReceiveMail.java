@@ -31,6 +31,7 @@ public class ReceiveMail {
 
         Message message[] = folder.getMessages();
         for(int i=0;i<message.length;i++){
+//            System.out.println("Message : "+(i+1));
             System.out.println(i+ " : "+message[i].getFrom()[0]+"\t"+message[i].getSubject());
             System.out.println(message[i].getContentType());
         }
